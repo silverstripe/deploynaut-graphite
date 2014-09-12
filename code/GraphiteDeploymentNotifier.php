@@ -5,7 +5,7 @@
  * In all likelihood this would get refactored in the future if we add other notifiers.
  * To do so now would be overengineering. ;-)
  */
-class GraphiteDeploymentNotifier {
+class GraphiteDeploymentNotifier extends DataExtension {
 	/**
 	 * Config set in the .yml file
 	 */
@@ -83,4 +83,11 @@ class GraphiteDeploymentNotifier {
 		}
 	}
 
+	public static function deployStart($args) {
+		self::notify_start($args['environment'], $args['sha'], null, $args['project']);
+	}
+
+	public static function deployEnd($args) {
+		self::notify_end($args['environment'], $args['sha'], null, $args['project']);
+	}
 }
