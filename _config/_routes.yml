@@ -1,0 +1,8 @@
+---
+Name: graphiteroutes
+After: 'rootroutes'
+---
+Director:
+  rules:
+    'metrics': 'MetricDashboard'
+    'graphite': 'GraphiteProxy'

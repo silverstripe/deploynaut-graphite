@@ -1,0 +1,8 @@
+{
+    "name": "silverstripe/deploynaut-graphite",
+    "description": "Graphite integration for Deploynaut",
+    "license": "BSD-3-Clause",
+    "require": {
+	"silverstripe/deploynaut": "*"
+    }
+}
